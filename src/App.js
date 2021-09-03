@@ -13,13 +13,13 @@ class App extends React.Component {
     this.resetState =  this.resetState.bind(this);
   }
 
-  resetState = () =>  window.location.reload(true);
+  resetState = () =>  window.location.reload();
 
   addToCounter = () => {
     this.setState((estadoAnterior, _props) => ({
       numberOfClicks: estadoAnterior.numberOfClicks + 1,
     }));
-    if(this.state.numberOfClicks === 10) { this.resetState() } 
+    if(this.state.numberOfClicks === 9) { this.resetState() } 
   }
 
   pokemonsToPrint = () => {
